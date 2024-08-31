@@ -28,16 +28,16 @@ const template = {
         {
           // 当前组件的标题
           title: '',
-          // 当前组件展示的类型
-          comType: 'text',
           // 当前组件的值
           value: '',
+          // 当前组件展示的类型
+          comType: 'text',
           // 标题在ppt上是否显示
           isShowTitleToPpt: false,
-          // 标题在ppt上的配置
-          titlePptConfig: {},
           // 值在ppt上是否显示
           isShowValueToPpt: true,
+          // 标题在ppt上的配置
+          titlePptConfig: {},
           // 值在ppt上的配置
           valuePptConfig: {},
           // 组件的配置
