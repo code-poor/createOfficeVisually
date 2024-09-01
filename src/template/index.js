@@ -1,4 +1,255 @@
-import { userList, onlineType } from './common';
+import { userList, onlineType, projectList, onlineList } from './common';
+const reviewResultsPage = {
+  // 当前页ppt的标题
+  title: 'review结果页面',
+  // 当前页ppt的编码
+  code: 'reviewResultsPage',
+  // ppt的内容
+  content: [
+    {
+      isShowToPage: false,
+      // 当前组件的标题
+      title: 'review结果',
+      // 当前组件展示的类型
+      comType: '',
+      // 当前组件的值
+      value: '',
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: false,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {}
+    },
+    {
+      // 当前组件的标题
+      title: '代码review同事',
+      // 当前组件展示的类型
+      comType: 'inputSelect',
+      // 当前组件的值
+      value: null,
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {
+        options: userList,
+        // 是否多选
+        mode: 'multiple'
+      }
+    },
+    {
+      // 当前组件的标题
+      title: 'review记录',
+      // 当前组件展示的类型
+      comType: 'inputTextArea',
+      // 当前组件的值
+      value: null,
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {}
+    },
+    {
+      // 当前组件的标题
+      title: 'review结果',
+      // 当前组件展示的类型
+      comType: 'inputText',
+      // 当前组件的值
+      value: '同意',
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {
+      }
+    }
+  ]
+};
+// 修改问题页模版
+const bugModifyContentTemplate = {
+  // 当前页ppt的标题
+  title: '修改内容页面',
+  // 当前页ppt的编码
+  code: 'modifyContentPage',
+  // 当前ppt名称扩展组件
+  titleExtComponent: [
+    {
+      comTitle: '重复新增',
+      // 组件类型
+      comType: 'button',
+      onClick: 'emergencyOnlineTmplModel.repeatAddition',
+      comCode: 'repeatAddition'
+    }
+  ],
+  // ppt的内容
+  content: [
+    {
+      isShowToPage: false,
+      // 当前组件的标题
+      title: '修改内容',
+      // 当前组件展示的类型
+      comType: '',
+      // 当前组件的值
+      value: '',
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: false,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {}
+    },
+    {
+      isShowToPage: true,
+      // 当前组件的标题
+      title: '1.所属组件库：',
+      // 当前组件展示的类型
+      comType: 'inputSelect',
+      // 当前组件的值
+      value: null,
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: false,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {
+        options: projectList,
+        // 是否多选
+        mode: 'multiple'
+      }
+    },
+    {
+      isShowToPage: true,
+      // 当前组件的标题
+      title: '2.改动文件：',
+      // 当前组件展示的类型
+      comType: 'inputTextArea',
+      // 当前组件的值
+      value: null,
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {}
+    },
+    {
+      isShowToPage: true,
+      // 当前组件的标题
+      title: '3.改动细节：',
+      // 当前组件展示的类型
+      comType: 'inputTextArea',
+      // 当前组件的值
+      value: null,
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {}
+    }
+  ]
+};
+// 问题分析页模版
+const bugCauseAnalysisPage = {
+  // 当前页ppt的标题
+  title: '原因分析页面',
+  // 当前页ppt的编码
+  code: 'causeAnalysisPage',
+  // ppt的内容
+  content: [
+    {
+      // 当前组件的标题
+      title: '产生错误的原因：',
+      // 当前组件展示的类型
+      comType: 'inputTextArea',
+      // 当前组件的值
+      value: '',
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {}
+    },
+    {
+      // 当前组件的标题
+      title: '错误分析：',
+      // 当前组件展示的类型
+      comType: 'inputTextArea',
+      // 当前组件的值
+      value: '',
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {}
+    },
+    {
+      // 当前组件的标题
+      title: '解决方案：',
+      // 当前组件展示的类型
+      comType: 'inputTextArea',
+      // 当前组件的值
+      value: '',
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {}
+    }
+  ]
+};
 // 提交人信息页面
 const bugUserInfoPage = {
   // 当前页ppt的标题
@@ -29,9 +280,27 @@ const bugUserInfoPage = {
     },
     {
       // 当前组件的标题
-      title: '问题描述：',
+      title: 'jira编号',
       // 当前组件展示的类型
       comType: 'inputText',
+      // 当前组件的值
+      value: '',
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: false,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {}
+    },
+    {
+      // 当前组件的标题
+      title: '问题描述：',
+      // 当前组件展示的类型
+      comType: 'inputTextArea',
       // 当前组件的值
       value: '',
       // 标题在ppt上是否显示
@@ -43,7 +312,11 @@ const bugUserInfoPage = {
       // 值在ppt上的配置
       valuePptConfig: {},
       // 组件的配置
-      comOptions: {}
+      comOptions: {
+        style: {
+          width: 1000
+        }
+      }
     },
     {
       // 当前组件的标题
@@ -51,7 +324,7 @@ const bugUserInfoPage = {
       // 当前组件展示的类型
       comType: 'inputSelect',
       // 当前组件的值
-      value: '',
+      value: null,
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
@@ -61,7 +334,11 @@ const bugUserInfoPage = {
       // 值在ppt上的配置
       valuePptConfig: {},
       // 组件的配置
-      comOptions: {}
+      comOptions: {
+        options: userList,
+        // 是否多选
+        mode: 'multiple'
+      }
     },
     {
       // 当前组件的标题
@@ -69,7 +346,7 @@ const bugUserInfoPage = {
       // 当前组件展示的类型
       comType: 'inputSelect',
       // 当前组件的值
-      value: '',
+      value: null,
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
@@ -79,7 +356,11 @@ const bugUserInfoPage = {
       // 值在ppt上的配置
       valuePptConfig: {},
       // 组件的配置
-      comOptions: {}
+      comOptions: {
+        options: projectList,
+        // 是否多选
+        mode: 'multiple'
+      }
     },
     {
       // 当前组件的标题
@@ -87,7 +368,7 @@ const bugUserInfoPage = {
       // 当前组件展示的类型
       comType: 'inputSelect',
       // 当前组件的值
-      value: '',
+      value: null,
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
@@ -97,7 +378,11 @@ const bugUserInfoPage = {
       // 值在ppt上的配置
       valuePptConfig: {},
       // 组件的配置
-      comOptions: {}
+      comOptions: {
+        options: onlineList,
+        // 是否多选
+        mode: 'multiple'
+      }
     }
   ]
 };
@@ -111,7 +396,7 @@ const featTemplate = {
 const bugTemplate = {
   title: 'bug模版',
   pageType: 'bug',
-  content: [bugUserInfoPage]
+  content: [bugUserInfoPage, bugCauseAnalysisPage, bugModifyContentTemplate]
 };
 
 // 上线首页

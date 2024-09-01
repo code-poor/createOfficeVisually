@@ -51,7 +51,7 @@ const Home = () => {
     // 当前步骤数据
     const currTmplData = templateData[currStep]
     // 
-    return currTmplData.content.map((currPage) => {
+    return currTmplData?.content?.map((currPage) => {
       return (<EachPage key={currPage.id} currPage={currPage} onChange={changeEachPage} />)
     })
   }

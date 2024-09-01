@@ -11,6 +11,7 @@ const EachPage = ({ currPage, onChange }) => {
   };
   const renderEachCom = () => {
     return currPage.content.map((item) => {
+      if (item.isShowToPage === false) return null;
       return (
         <div className='each_com'>
           <div className='each_com_title'>{item.title}</div>
