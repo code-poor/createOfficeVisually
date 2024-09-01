@@ -41,6 +41,10 @@ class pptModel {
     const templateData = this.getTemplateData();
     // 创建pptx模型
     const pptxModel = new pptxgen();
+    // 定义页面大小
+    pptxModel.defineLayout({ name: 'custombk', width: 13.33, height: 7.49 });
+    // 设置页面大小
+    pptxModel.layout = 'custombk';
     // 遍历模版数据
     templateData.forEach((currPage) => {
       // 创建当前页面模型
@@ -53,3 +57,4 @@ class pptModel {
   }
 }
 export default pptModel;
+// 13.33--》25.4

@@ -17,7 +17,17 @@ const reviewResultsPage = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 0.9,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: false,
       // 值在ppt上的配置
@@ -27,7 +37,7 @@ const reviewResultsPage = {
     },
     {
       // 当前组件的标题
-      title: '代码review同事',
+      title: '代码review同事：',
       // 当前组件展示的类型
       comType: 'inputSelect',
       // 当前组件的值
@@ -35,11 +45,25 @@ const reviewResultsPage = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 2.1,
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 2.6,
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
       comOptions: {
         options: userList,
@@ -49,7 +73,7 @@ const reviewResultsPage = {
     },
     {
       // 当前组件的标题
-      title: 'review记录',
+      title: 'review记录：',
       // 当前组件展示的类型
       comType: 'inputTextArea',
       // 当前组件的值
@@ -57,17 +81,31 @@ const reviewResultsPage = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 3.1,
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 3.8,
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
       comOptions: {}
     },
     {
       // 当前组件的标题
-      title: 'review结果',
+      title: 'review结果：',
       // 当前组件展示的类型
       comType: 'inputText',
       // 当前组件的值
@@ -75,14 +113,27 @@ const reviewResultsPage = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 4.5,
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 5,
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
-      comOptions: {
-      }
+      comOptions: {}
     }
   ]
 };
@@ -115,7 +166,24 @@ const bugModifyContentTemplate = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 0.9,
+        //黑色
+        // 宋体
+        fontFace: 'CIDFont',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        // 文字阴影
+        shadow: {
+          x: 0.1,
+          y: 0.1,
+          color: '000000',
+          blur: 0.1
+        },
+        fontSize: 24
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: false,
       // 值在ppt上的配置
@@ -134,11 +202,29 @@ const bugModifyContentTemplate = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 1.5,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
-      isShowValueToPpt: false,
+      isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 2.1,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
       comOptions: {
         options: projectList,
@@ -157,11 +243,29 @@ const bugModifyContentTemplate = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 2.7,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 3.4,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
       comOptions: {}
     },
@@ -176,11 +280,29 @@ const bugModifyContentTemplate = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 4.2,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 4.8,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
       comOptions: {}
     }
@@ -204,11 +326,29 @@ const bugCauseAnalysisPage = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 1.5,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 2.4,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
       comOptions: {}
     },
@@ -222,11 +362,29 @@ const bugCauseAnalysisPage = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 3.3,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 4.1,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
       comOptions: {}
     },
@@ -240,11 +398,29 @@ const bugCauseAnalysisPage = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 4.8,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 5.6,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
       comOptions: {}
     }
@@ -272,7 +448,24 @@ const bugUserInfoPage = {
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1,
+        y: 0.9,
+        //黑色
+        // 宋体
+        fontFace: 'CIDFont',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        // 文字阴影
+        shadow: {
+          x: 0.1,
+          y: 0.1,
+          color: '000000',
+          blur: 0.1
+        },
+        fontSize: 24
+      },
       // 组件的配置
       comOptions: {
         options: userList
@@ -306,11 +499,29 @@ const bugUserInfoPage = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 1.7,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 2.5,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
       comOptions: {
         style: {
@@ -328,11 +539,29 @@ const bugUserInfoPage = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 3.3,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 3.8,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
       comOptions: {
         options: userList,
@@ -350,11 +579,29 @@ const bugUserInfoPage = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 4.5,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 5,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
       comOptions: {
         options: projectList,
@@ -372,11 +619,29 @@ const bugUserInfoPage = {
       // 标题在ppt上是否显示
       isShowTitleToPpt: true,
       // 标题在ppt上的配置
-      titlePptConfig: {},
+      titlePptConfig: {
+        x: 1,
+        y: 5.7,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 1.5,
+        y: 6.2,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
       // 组件的配置
       comOptions: {
         options: onlineList,
@@ -396,7 +661,7 @@ const featTemplate = {
 const bugTemplate = {
   title: 'bug模版',
   pageType: 'bug',
-  content: [bugUserInfoPage, bugCauseAnalysisPage, bugModifyContentTemplate]
+  content: [bugUserInfoPage, bugCauseAnalysisPage, bugModifyContentTemplate, reviewResultsPage]
 };
 
 // 上线首页
@@ -422,8 +687,8 @@ const onlineHomePage = {
       isShowValueToPpt: true,
       // 值在ppt上的配置
       valuePptConfig: {
-        x: 4,
-        y: 3.1,
+        x: 5.7,
+        y: 4,
         //黑色
         // 宋体
         fontFace: '宋体',
@@ -451,11 +716,11 @@ const onlineHomePage = {
       isShowValueToPpt: true,
       // 值在ppt上的配置
       valuePptConfig: {
-        x: 1.5,
-        y: 2.5,
+        x: 3.1,
+        y: 3.3,
         //黑色
         // 宋体
-        fontFace: '宋体',
+        fontFace: '宋体 (标题)',
         color: '000000',
         // 字体加粗
         bold: true,
@@ -481,8 +746,8 @@ const onlineHomePage = {
       isShowValueToPpt: true,
       // 值在ppt上的配置
       valuePptConfig: {
-        x: 4.4,
-        y: 3.5,
+        x: 6,
+        y: 4.5,
         //黑色
         // 宋体
         fontFace: 'Arial Black (标题)',
