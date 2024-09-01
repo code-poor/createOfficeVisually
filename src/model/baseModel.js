@@ -3,11 +3,9 @@ class BaseModel {
     this.name = 'baseModel';
     this._data = {
       // 场景数据
-      sceneData: null,
+      templateType: 'emergencyOnLine',
       // 模版列表
-      templateList: [],
-      // 当前模版
-      currentTemplate: {}
+      templateData: []
     };
   }
 
@@ -17,11 +15,9 @@ class BaseModel {
   initValue() {
     this._data = {
       // 场景数据
-      sceneData: null,
+      templateType: 'emergencyOnLine',
       // 模版列表
-      templateList: [],
-      // 当前模版
-      currentTemplate: {}
+      templateData: []
     };
   }
 
@@ -32,7 +28,7 @@ class BaseModel {
    */
   getValue(key) {
     // 如果key不存在，返回所有数据
-    if (!this._data[key]) return this._data;
+    if (!key) return this._data;
     // 如果key存在，返回key对应的值
     return this._data[key];
   }
