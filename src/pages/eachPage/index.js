@@ -12,15 +12,15 @@ const EachPage = ({ currPage, onChange }) => {
   const renderEachCom = () => {
     return currPage.content.map((item) => {
       return (
-        <>
-          <div>{item.title}</div>
-          <div>{<EachCom item={item} onChange={changeEachCom} />}</div>
-        </>
+        <div className='each_com'>
+          <div className='each_com_title'>{item.title}</div>
+          <div className='each_com_value'>{<EachCom item={item} onChange={changeEachCom} />}</div>
+        </div>
       );
     });
   };
   return (
-    <div>
+    <div className='each_page'>
       <div>{currPage.title}</div>
       <div>{renderEachCom()}</div>
     </div>

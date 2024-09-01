@@ -2,7 +2,6 @@ import React from 'react';
 import { Select } from "antd";
 const InputSelect = (props) => {
     const onChange = (value) => {
-        debugger
         props.onChange(value);
     }
     return (

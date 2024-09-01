@@ -1,5 +1,26 @@
 import pptxgen from 'pptxgenjs';
 class pptModel {
+  /**
+   * @description 获取ppt文件名
+   * @returns
+   */
+  getPptFileName() {
+    let currTmplAnalData = window.yyds.tmplAnalModel.getTemplateData();
+    const homePage = currTmplAnalData[0].content[0];
+    return homePage.content.map((currCom) => currCom.value.replace('说明', '').replaceAll('-', '')).join('-');
+  }
+  /**
+   * @description 获取模版数据
+   */
+  getTemplateData() {
+    let templateData = [];
+    let currTmplAnalData = window.yyds.tmplAnalModel.getTemplateData();
+    currTmplAnalData = window.yyds.commonModel.cloneDeep(currTmplAnalData);
+    currTmplAnalData.forEach((currTmpl) => {
+      templateData = [...templateData, ...currTmpl.content];
+    });
+    return templateData;
+  }
   createPptPage(currPage, currPageModel) {
     currPage.content.forEach((currCom) => {
       if (currCom.isShowTitleToPpt) {
@@ -14,20 +35,21 @@ class pptModel {
       }
     });
   }
+
   createPpt() {
     // 获取当前模版分析数据
-    const currTmplAnalData = window.yyds.tmplAnalModel.getCurrTmplAnalData();
+    const templateData = this.getTemplateData();
     // 创建pptx模型
     const pptxModel = new pptxgen();
     // 遍历模版数据
-    currTmplAnalData.content.forEach((currPage) => {
+    templateData.forEach((currPage) => {
       // 创建当前页面模型
       const currPageModel = pptxModel.addSlide();
       // 创建当前页细节
       this.createPptPage(currPage, currPageModel);
     });
     // 创建pptx
-    pptxModel.writeFile({ fileName: `${currTmplAnalData.title}.pptx` });
+    pptxModel.writeFile({ fileName: `${this.getPptFileName()}.pptx` });
   }
 }
 export default pptModel;

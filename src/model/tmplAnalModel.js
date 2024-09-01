@@ -5,14 +5,14 @@ class tmplAnalModel {
   initValue() {
     // 定义初始化模版数据
     let newTemplate = window.yyds.commonModel.cloneDeep(template);
-    // 获取当前模版类型
-    const templateType = this.getTemplateType();
-    // 创建紧急上线模版
-    if (templateType === 'emergencyOnLine') newTemplate.push(bugTemplate);
-    // 创建迭代上线模版
-    if (templateType === 'iterativeOnLine') newTemplate.push(featTemplate);
-    // 深拷贝模版数据
-    newTemplate = window.yyds.commonModel.cloneDeep(newTemplate);
+    // // 获取当前模版类型
+    // const templateType = this.getTemplateType();
+    // // 创建紧急上线模版
+    // if (templateType === 'emergencyOnLine') newTemplate.push(bugTemplate);
+    // // 创建迭代上线模版
+    // if (templateType === 'iterativeOnLine') newTemplate.push(featTemplate);
+    // // 深拷贝模版数据
+    // newTemplate = window.yyds.commonModel.cloneDeep(newTemplate);
     // 模版进行初始化
     this.templateInit(newTemplate);
     // 对模版tree数据增加id
@@ -38,7 +38,7 @@ class tmplAnalModel {
    * @description 获取当前模版分析数据
    * @returns
    */
-  getTmplAnalData() {
+  getTemplateData() {
     return baseModel.getValue('tmplAnalData');
   }
 
@@ -66,17 +66,11 @@ class tmplAnalModel {
   }
 
   /**
-   * @description 更改当前模版类型
-   * @returns
-   */
-  changeTemplateType(templateType) {}
-
-  /**
    * @description 新增模版
    */
   addTemplate(templateType) {
     // 获取当前模版数据
-    let currTmplAnalData = this.getTmplAnalData();
+    let currTmplAnalData = this.getTemplateData();
     // 创建模版
     if (templateType === 'bug') {
       const newBugTemplate = window.yyds.commonModel.cloneDeep(bugTemplate);
