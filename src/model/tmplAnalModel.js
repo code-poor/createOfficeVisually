@@ -1,5 +1,5 @@
 import baseModel from './baseModel';
-import { template, bugTemplate, featTemplate } from '../template';
+import { template, bugTemplate, featTemplate, bugModifyContentTemplate } from '../template';
 class tmplAnalModel {
   // 初始化模版数据
   initValue() {
@@ -41,7 +41,9 @@ class tmplAnalModel {
   getTemplateData() {
     return baseModel.getValue('tmplAnalData');
   }
-
+  setCurrStep(num) {
+    baseModel.setValue('currStep', num);
+  }
   /**
    * @description 设置模版数据
    * @param {*} data
@@ -84,6 +86,19 @@ class tmplAnalModel {
     }
     // 设置模版数据
     this.setTemplateData(currTmplAnalData);
+  }
+
+  repeatAdditionModifyContentTemplate() {
+    const currStep = baseModel.getValue('currStep');
+    const templateData = baseModel.getValue('tmplAnalData');
+    const currPage = templateData[currStep];
+    const newBugModifyContentTemplate = window.yyds.commonModel.cloneDeep(bugModifyContentTemplate);
+    //在倒数第1个页面前面插入一个新的页面
+    window.yyds.tmplAnalModel.templateInit(newBugModifyContentTemplate);
+    //在倒数currPage第1个页面前面插入一个新的页面
+    currPage.content.splice(currPage.content.length - 1, 0, newBugModifyContentTemplate);
+    // 设置模版数据
+    window.yyds.tmplAnalModel.setTemplateData(templateData);
   }
 }
 export default tmplAnalModel;

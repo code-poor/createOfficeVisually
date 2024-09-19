@@ -7,9 +7,13 @@ const Home = () => {
   // 定义强制更新
   const forceUpdate = useUpdate();
   // 当前步骤
-  const [currStep, setCurrStep] = useState(0);
+  const [currStep, setCurrStep1] = useState(0);
   // 获取模板数据
   const templateData = window.yyds.tmplAnalModel.getTemplateData();
+  const setCurrStep = (num) => {
+    window.yyds.tmplAnalModel.setCurrStep(num);
+    setCurrStep1(num)
+  }
   /**
    * @description: 添加模板数据
    */
@@ -52,7 +56,7 @@ const Home = () => {
     const currTmplData = templateData[currStep]
     // 
     return currTmplData?.content?.map((currPage) => {
-      return (<EachPage key={currPage.id} currPage={currPage} onChange={changeEachPage} />)
+      return (<EachPage key={currPage.id} currPage={currPage} onChange={changeEachPage} forceUpdate={forceUpdate} />)
     })
   }
 
