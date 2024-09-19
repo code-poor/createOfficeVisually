@@ -149,7 +149,7 @@ const bugModifyContentTemplate = {
       comTitle: '重复新增',
       // 组件类型
       comType: 'button',
-      onClick: 'emergencyOnlineTmplModel.repeatAddition',
+      onClick: 'tmplAnalModel.repeatAdditionModifyContentTemplate',
       comCode: 'repeatAddition'
     }
   ],
@@ -485,7 +485,24 @@ const bugUserInfoPage = {
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 2.3,
+        y: 0.85,
+        //黑色
+        // 宋体
+        fontFace: '宋体 (正文)',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        // 文字阴影
+        shadow: {
+          x: 0.1,
+          y: 0.1,
+          color: '000000',
+          blur: 0.1
+        },
+        fontSize: 20
+      },
       // 组件的配置
       comOptions: {}
     },
@@ -651,11 +668,237 @@ const bugUserInfoPage = {
     }
   ]
 };
+// 故事提交人信息页面
+const featUserInfoPage = {
+  // 当前页ppt的标题
+  title: '提交人信息页面',
+  // 当前页ppt的编码
+  code: 'submitterInformationPage',
+  // ppt的内容
+  content: [
+    {
+      // 当前组件的标题
+      title: '故事提交人',
+      // 当前组件展示的类型
+      comType: 'inputSelect',
+      // 当前组件的值
+      value: '',
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: false,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {
+        x: 1,
+        y: 0.9,
+        //黑色
+        // 宋体
+        fontFace: 'CIDFont',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        // 文字阴影
+        shadow: {
+          x: 0.1,
+          y: 0.1,
+          color: '000000',
+          blur: 0.1
+        },
+        fontSize: 24
+      },
+      // 组件的配置
+      comOptions: {
+        options: userList
+      }
+    },
+    {
+      // 当前组件的标题
+      title: 'jira编号',
+      // 当前组件展示的类型
+      comType: 'inputText',
+      // 当前组件的值
+      value: '',
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: false,
+      // 标题在ppt上的配置
+      titlePptConfig: {},
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {},
+      // 组件的配置
+      comOptions: {}
+    },
+    {
+      // 当前组件的标题
+      title: '故事描述：',
+      // 当前组件展示的类型
+      comType: 'inputTextArea',
+      // 当前组件的值
+      value: '',
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {
+        x: 1,
+        y: 1.7,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {
+        x: 1.5,
+        y: 2.5,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
+      // 组件的配置
+      comOptions: {
+        style: {
+          width: 1000
+        }
+      }
+    },
+    {
+      // 当前组件的标题
+      title: '开发人：',
+      // 当前组件展示的类型
+      comType: 'inputSelect',
+      // 当前组件的值
+      value: null,
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {
+        x: 1,
+        y: 3.3,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {
+        x: 1.5,
+        y: 3.8,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
+      // 组件的配置
+      comOptions: {
+        options: userList,
+        // 是否多选
+        mode: 'multiple'
+      }
+    },
+    {
+      // 当前组件的标题
+      title: '修改的项目：',
+      // 当前组件展示的类型
+      comType: 'inputSelect',
+      // 当前组件的值
+      value: null,
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {
+        x: 1,
+        y: 4.5,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {
+        x: 1.5,
+        y: 5,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
+      // 组件的配置
+      comOptions: {
+        options: projectList,
+        // 是否多选
+        mode: 'multiple'
+      }
+    },
+    {
+      // 当前组件的标题
+      title: '上线环境：',
+      // 当前组件展示的类型
+      comType: 'inputSelect',
+      // 当前组件的值
+      value: null,
+      // 标题在ppt上是否显示
+      isShowTitleToPpt: true,
+      // 标题在ppt上的配置
+      titlePptConfig: {
+        x: 1,
+        y: 5.7,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        fontSize: 20
+      },
+      // 值在ppt上是否显示
+      isShowValueToPpt: true,
+      // 值在ppt上的配置
+      valuePptConfig: {
+        x: 1.5,
+        y: 6.2,
+        //黑色
+        // 宋体
+        fontFace: '微软雅黑 Light',
+        color: '000000',
+        fontSize: 17
+      },
+      // 组件的配置
+      comOptions: {
+        options: onlineList,
+        // 是否多选
+        mode: 'multiple'
+      }
+    }
+  ]
+};
+
 // 故事模版
 const featTemplate = {
   title: '故事模版',
   pageType: 'feat',
-  content: [bugUserInfoPage]
+  content: [featUserInfoPage, bugModifyContentTemplate, reviewResultsPage]
 };
 // bug模版
 const bugTemplate = {
@@ -769,4 +1012,4 @@ const template = [
     content: [onlineHomePage]
   }
 ];
-export { template, bugTemplate, featTemplate };
+export { template, bugTemplate, featTemplate, bugModifyContentTemplate };
