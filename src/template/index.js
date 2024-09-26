@@ -727,7 +727,24 @@ const featUserInfoPage = {
       // 值在ppt上是否显示
       isShowValueToPpt: true,
       // 值在ppt上的配置
-      valuePptConfig: {},
+      valuePptConfig: {
+        x: 2.3,
+        y: 0.85,
+        //黑色
+        // 宋体
+        fontFace: '宋体 (正文)',
+        color: '000000',
+        // 字体加粗
+        bold: true,
+        // 文字阴影
+        shadow: {
+          x: 0.1,
+          y: 0.1,
+          color: '000000',
+          blur: 0.1
+        },
+        fontSize: 20
+      },
       // 组件的配置
       comOptions: {}
     },
